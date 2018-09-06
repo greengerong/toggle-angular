@@ -1,0 +1,20 @@
+.header {
+  margin-bottom: 2rem;
+}
+.empty-table {
+  text-align: center;
+  font-size: 200%;
+}
+.action {
+  width: 100px;
+}
+.navbar-nav-svg {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-top;
+}
+.logo {
+  width: 36px;
+  height: 36px;
+}

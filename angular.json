@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "toggle-angular": {
+      "root": "projects/toggle-angular",
+      "sourceRoot": "projects/toggle-angular/src",
+      "projectType": "library",
+      "prefix": "to",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/toggle-angular/tsconfig.lib.json",
+            "project": "projects/toggle-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/toggle-angular/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/toggle-angular/src/test.ts",
+            "tsConfig": "projects/toggle-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/toggle-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/toggle-angular/tsconfig.lib.json",
+              "projects/toggle-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "toggle-angular-app"

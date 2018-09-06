@@ -1,0 +1,25 @@
+<h2>Features: {{env}}</h2>
+<hr>
+
+<h4>Feature config:</h4>
+<pre>{{features | json}}</pre>
+
+
+<section>
+  <h4>@FeatureToggle</h4>
+  <button class="btn btn-primary" (click)="alertFoo()">Alert on foo enbale</button> &nbsp;
+  <button class="btn btn-warning" (click)="alertBar()">Alert on bar enbale</button>
+</section>
+
+<section>
+  <h4>ToggleService</h4>
+  <button class="btn btn-primary" (click)="toggle()">Alert on foo enbale</button> &nbsp;
+</section>
+
+
+<section>
+  <h4>FeatureToggle directive</h4>
+  <div *featureToggle="'foo'"> Foo enable</div>
+  <div *featureToggle="'foo'"> Bar enable</div>
+</section>
+
